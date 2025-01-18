@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS AGGREGATOR</title>
+</head>
+<body>
+    <h1>NEWS AGGREGATOR</h1>
+    <form method="get" action="/">
+        <input type="text" name="search" placeholder="searching news......" value="{{search_query}}">
+        <button type="submit">search</button>
+    </form>
+    <ul>
+        {% for news_item in news%}
+        <li>
+            <h2><a href="{{ news_item[1] }}">{{ news_item[0] }}</a></h2>
+            <p>{{ news_item[2] }}</p>
+            <small>category:{{ news_item[3] }}|publication on:{{ news_item[4] }}</small>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
