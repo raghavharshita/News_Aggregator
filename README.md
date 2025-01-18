@@ -11,3 +11,6 @@ A Python-based web scraper and Flask web application for aggregating and display
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/raghavharshita/News_Aggregator.git
